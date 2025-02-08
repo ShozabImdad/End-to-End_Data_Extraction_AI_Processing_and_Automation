@@ -38,7 +38,7 @@ def main():
         df = pd.DataFrame(processed_articles)
         df.to_csv('processed_articles.csv', index=False)
         
-        # Post to Medium
+        # Post to ggithub gist
         logging.info("Posting articles to Gist...")
         for article in processed_articles:
             gist_poster.create_post(article)
